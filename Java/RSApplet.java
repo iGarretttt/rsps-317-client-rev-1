@@ -35,7 +35,7 @@ public class RSApplet extends Applet implements Runnable, MouseListener, MouseMo
 		int j = 256;
 		int k = 1;
 		int i1 = 0;
-		int j1 = 0;
+		int j1 = 0;6
 		for(int k1 = 0; k1 < 10; k1++)
 			aLongArray7[k1] = System.currentTimeMillis();
 
@@ -203,11 +203,11 @@ public class RSApplet extends Applet implements Runnable, MouseListener, MouseMo
 		clickX = i;
 		clickY = j;
 		clickTime = System.currentTimeMillis();
-		if(mouseevent.isMetaDown())
+		if(SwingUtilities.isRightMouseButton(e)) 
 		{
 			clickMode1 = 2;
 			clickMode2 = 2;
-		} else
+		} else if(SwingUtilities.isLeftMouseButton(e))
 		{
 			clickMode1 = 1;
 			clickMode2 = 1;
